@@ -24,4 +24,17 @@ public class Calculator
     {
         return a / b;
     }
+
+    public int GetInputNum(string input)
+    {
+        int num = 0;
+        if (int.TryParse(input, out num))
+        {
+            return num;
+        }
+        else
+        {
+            throw new System.FormatException("");
+        }
+    }
 }

@@ -41,5 +41,12 @@ namespace Calculator.Tests
             Assert.That(calculator.Miltiplication(15, 19) == 285);
         }
 
+        [Test]
+        public void GetInputNum_MustThrowException()
+        {
+            var calculator = new UnitSamples.Calculator();
+            Assert.Throws<FormatException>(() => calculator.GetInputNum("test"));
+        }
+
     }
 }
